@@ -17,17 +17,17 @@ A typical django url pattern:
 
     url(r'^questions/(?P<any_keyword_argument>\d+)/$', views.question_details, name='question_details'),
 
-Above url may seems to be a rumble of punctuation marks. However, it is jus a regular Python.
+Above url may seems to be a rumble of punctuation marks. However, it is just a regular Python.
 
 Notes:
 
 #. **^questions** is telling django to match anything that starts with the word **questions**.
-#. / tells djnango that another / should follow.
-#. **(?P<any_keyword_argument>\d+)** is a interesting one. It is capturing    value based on regex and assign it to **any_keyword_argument**. Here \\d+ is a regex. \\d matches for single digit from 0 to 9 while **+** says previous item should be repeated at least once.
+#. / tells djnago that another / should follow.
+#. **(?P<any_keyword_argument>\d+)** is a interesting one. It is capturing value based on regex and assign it to **any_keyword_argument**. Here \\d+ is a regex. \\d matches for single digit from 0 to 9 while **+** says previous item should be repeated at least once.
 #. /$ means end of url i.e no another / will appear.
 
 
-If I have url `http://www.mysite.com/questions/22/ <http://http://www.mysite.com/questins/22>`_  then any_keyword_argument will get the value of 22.
+If I have url `http://www.mysite.com/questions/22/ <http://http://www.mysite.com/questins/22>`_  then any_keyword_argument will get the value of 22 and passes it to my views for further processing.
 
 So, to capture any value in keyword argument we must use **(?P<any_keyword_argument> regex)** in our url.
 
