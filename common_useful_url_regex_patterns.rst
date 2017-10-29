@@ -1,7 +1,7 @@
 **************************************************
 Common and Useful URL Regular Expression Patterns(regex)
 **************************************************
-Many time I found myself refering to books to see urlpatterns in django. So I thought to create a quick overview of django urlpatten for use in my projects. 
+Many time I found myself refering to books to see urlpatterns in django. So I thought to create a quick overview of django urlpatten for use in my django projects. 
 
 A typical url instance of django.
 
@@ -24,14 +24,14 @@ Notes:
 #. **^questions** is telling django to match anything that starts with the word **questions**.
 #. / tells djnago that another / should follow.
 #. **(?P<any_keyword_argument>\d+)** is a interesting one. It is capturing value based on regex and assign it to **any_keyword_argument**. Here \\d+ is a regex. \\d matches for single digit from 0 to 9 while **+** says previous item should be repeated at least once.
-#. /$ means end of url i.e no another / will appear.
+#. /$ means end of url i.e no another / will appear after this.
 
 
 If I have url `http://www.mysite.com/questions/22/ <http://http://www.mysite.com/questins/22>`_  then any_keyword_argument will get the value of 22 and passes it to my views for further processing.
 
 So, to capture any value in keyword argument we must use **(?P<any_keyword_argument> regex)** in our url.
 
-I often use mnemonic for this **Pirate Queen Produces Anaconda** where
+I often use Mnemonic for this **Pirate Queen Produces Anaconda** where
 
 * P of Pirate stands for Parenthesis (
 * Q of Queen for Question Mark i.e ?.
