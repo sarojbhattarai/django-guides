@@ -1,7 +1,7 @@
 **************************************************
 Common and Useful URL Regular Expression Patterns(regex)
 **************************************************
-Many time I found myself refering to books to see urlpatterns in django. So I thought to create a quick overview of django urlpatten for use in my django projects. 
+Many time I found myself refering to books to see urlpatterns in django. So I thought to create a quick overview of django urlpattens for use in my django projects and to help other django developers to ease their work. 
 
 A typical url instance of django.
 
